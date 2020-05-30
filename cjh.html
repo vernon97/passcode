@@ -333,16 +333,17 @@
         var valDay = myDay + 3;
         var valMonth = myMonth;
         if (valDay > 30) {
-            valDay = 1
-            valMonth += 1
+            valDay = 1;
+            valMonth += 1;
         }
         if (valMonth > 12) {
-            valMonth = 1
+            valMonth = 1;
         }
+        var strDay = valDay.toLocaleString();
         if (valDay < 10){
-            valDay = 0 + valDay
+            strDay =  "0" + strDay;
         }
-        document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + valMonth.toLocaleString() + "-" + valDay.toLocaleString())
+        document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + valMonth.toLocaleString() + "-" + strDay)
         </script></div>
 
 
