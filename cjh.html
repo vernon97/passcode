@@ -330,7 +330,17 @@
         var myDate = new Date();
         var myMonth = myDate.getMonth() + 1;
         var myDay = myDate.getDate();
-        document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + myMonth.toLocaleString() + 1 + "-" + (3).toLocaleString())
+        var valDay = myDay + 3;
+        var valMonth = myMonth;
+        if (valDay > 30) {
+            valDay = 1
+            valMonth += 1
+        }
+        if (valMonth > 12) {
+            valMonth = 1
+        }
+        
+        document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + valMonth.toLocaleString() + 1 + "-" + valDay.toLocaleString())
         </script></div>
 
 
