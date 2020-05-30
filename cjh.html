@@ -339,11 +339,12 @@
         if (valMonth > 12) {
             valMonth = 1;
         }
-        var strDay = valDay.toLocaleString();
         if (valDay < 10){
-            strDay =  "0" + strDay;
+            document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + valMonth.toLocaleString() + "-" + "0" + valDay.toLocaleString())
         }
-        document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + valMonth.toLocaleString() + "-" + strDay)
+        else {
+        document.write("有效期：2020-0" + myMonth.toLocaleString() + "-" + myDay.toLocaleString() + " - 2020-0" + valMonth.toLocaleString() + "-" + valDay.toLocaleString())
+        }
         </script></div>
 
 
